@@ -1,3 +1,1 @@
-PREFIX dbpedia: <http://dbpedia.org/resource/>
-
-DESCRIBE dbpedia:Amsterdam
+DESCRIBE <http://dbpedia.org/resource/Amsterdam>
