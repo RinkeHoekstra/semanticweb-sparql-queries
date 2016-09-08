@@ -1,0 +1,11 @@
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX example: <http://www.example.org/>
+CONSTRUCT { 
+	?city example:area-code ?area_code
+}
+WHERE {
+ ?city dbpediaowl:country dbpedia:Netherlands ;
+    dbpediaowl:areaCode ?area_code .
+} 

@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT ?city ?area_code
+WHERE {
+  ?city a dbpediaowl:City ;
+    dbpediaowl:areaCode ?area_code .
+  MINUS
+  { [] dbpedia:capital ?city }
+} LIMIT 20

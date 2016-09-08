@@ -1,0 +1,6 @@
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+ASK {
+	dbpedia:Amsterdam dbp:areaCode	020 .
+}

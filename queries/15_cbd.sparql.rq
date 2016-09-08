@@ -1,0 +1,10 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+CONSTRUCT {
+  dbpedia:Amsterdam ?rel ?o .
+  ?s ?rel_of dbpedia:Amsterdam
+}
+WHERE {
+  { dbpedia:Amsterdam ?rel ?o }
+  UNION { ?s ?rel_of dbpedia:Amsterdam }
+}

@@ -1,0 +1,9 @@
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT ?city ?population
+WHERE {
+ ?city dbp:areaCode	020 ; 
+ 	dbpediaowl:populationTotal ?population .
+  FILTER (?population > 500000) 
+} 

@@ -1,0 +1,10 @@
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?city ?label
+WHERE {
+ ?city dbp:areaCode	020 ; 
+ 	rdfs:label ?label . 
+  FILTER (langMatches(lang(?label), "EN"))
+} 

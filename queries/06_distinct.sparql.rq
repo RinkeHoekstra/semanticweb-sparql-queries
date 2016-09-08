@@ -1,0 +1,8 @@
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT DISTINCT ?city 
+WHERE {
+ ?city dbp:areaCode	020 . 
+ ?capitalOf dbpediaowl:capital ?city  
+} 

@@ -1,0 +1,11 @@
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?country (GROUP_CONCAT (?city_name, ",") AS ?cities)
+WHERE {
+  ?country a dbpediaowl:Country .
+  ?city a dbpediaowl:City ;
+    dbpediaowl:country ?country ;
+    rdfs:label ?city_name
+} GROUP BY ?country HAVING (COUNT(DISTINCT?city) < 10)

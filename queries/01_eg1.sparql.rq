@@ -1,0 +1,9 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+SELECT ?country ?capital ?rel
+WHERE {
+  ?country rdf:type dbpediaowl:Country ;
+    dbpediaowl:capital ?capital .
+  ?capital ?rel 020 .
+}

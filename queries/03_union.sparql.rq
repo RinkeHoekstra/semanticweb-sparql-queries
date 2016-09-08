@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT ?city
+WHERE {
+ ?city dbpediaowl:country dbpedia:Netherlands .
+  { ?city dbp:areaCode	020 . }
+  UNION { ?city dbp:areaCode	010 . }
+} 
