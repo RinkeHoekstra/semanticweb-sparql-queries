@@ -1,7 +1,7 @@
 #+ endpoint: http://live.dbpedia.org/sparql
 
 PREFIX dbo: 	<http://dbpedia.org/ontology/>
- PREFIX owl: 	<http://www.w3.org/2002/07/owl#>  
+PREFIX owl: 	<http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT ?x ?y
 WHERE { 
