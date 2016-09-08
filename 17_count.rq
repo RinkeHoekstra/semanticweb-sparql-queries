@@ -1,8 +1,8 @@
-PREFIX dbpedia: <http://dbpedia.org/resource/>
-PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
 SELECT ?country (COUNT(DISTINCT ?city) AS ?city_count)
 WHERE {
-  ?country a dbpediaowl:Country .
-  ?city dbpediaowl:country ?country .
+  ?country a dbo:Country .
+  ?city dbo:country ?country .
 }

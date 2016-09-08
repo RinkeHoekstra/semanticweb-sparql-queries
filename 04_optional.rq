@@ -1,8 +1,11 @@
-PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
-PREFIX dbpedia: <http://dbpedia.org/resource/>
-SELECT ?city ?capitalOf
+PREFIX dbr: <http://dbpedia.org/resource/>
+
+SELECT ?city ?capital
 WHERE {
- ?city dbp:areaCode	020 . 
-  OPTIONAL { ?capitalOf dbpediaowl:capital ?city  }
-} 
+  ?city  dbo:areaCode  "020" .
+  OPTIONAL {
+     ?capital  dbo:capital  ?city .  
+  }
+}
