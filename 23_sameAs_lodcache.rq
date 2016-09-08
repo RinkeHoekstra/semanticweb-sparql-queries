@@ -4,8 +4,8 @@ PREFIX dbo: 	<http://dbpedia.org/ontology/>
 PREFIX owl: 	<http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT ?x ?y
-WHERE { 
-  ?x	dbo:areaCode	"020". 
-  ?y	owl:sameAs	  ?x . 
-  FILTER (?x != ?y) 
+WHERE {
+  ?x	dbo:areaCode	"020".
+  ?y	owl:sameAs	  ?x .
+  FILTER (?x != ?y)
 }
